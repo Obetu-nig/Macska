@@ -1,0 +1,134 @@
+<head>
+<html lang="hu">
+<link rel="stylesheet" href="stilo.css">
+<meta charset="utf-8">
+<title>cirkusz</title>
+</head>
+<body>
+  
+    <header>
+      <div class="dropdown">
+        <button class="dropbtn">Cirkusz</button>
+        <div class="dropdown-content">
+          <a href="#tortenet">Történet</a>
+          <a href="#jegyarak">Jegyárak</a>
+        </div>
+      </div>
+
+<div class="roblox">
+   <h1 class="blink_me">Bim Bumm</h1>
+</div>
+<div class="roblox2">
+    <h1 class="blink_me">Cirkusz</h1>
+</div>
+
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 6</div>
+      <img src="cirkusz.jpg" class="abc" style="width:100%">
+      <div class="text"></div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 6</div>
+      <img src="cirkusz2.jpg" class="abc" style="width:100%">
+      <div class="text"></div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 6</div>
+      <img src="cirkusz3.webp" class="abc" style="width:100%">
+      <div class="text"></div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 6</div>
+        <img src="cirkusz4.jpg" class="abc" style="width:100%">
+        <div class="text"></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 6</div>
+        <img src="cirkusz5.jpg" class="abc" style="width:100%">
+        <div class="text"></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">6 / 6</div>
+        <img src="cirkusz6.jpg" class="abc" style="width:100%">
+        <div class="text"></div>
+      </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+  </div>
+
+  <div id="parent">
+    <div id="left">
+    <h2>Történet</h2>
+    A "Bimm Bumm" nevű cirkusz története az egyik legkülönlegesebb és legmeglepőbb volt a városban. Az első előadás napján, amikor a fáklyák fényében ragyogó porondot felállították a régi piactéren, senki sem tudta, mi vár rájuk. A cirkusz nem hirdette előre a műsorát, nem voltak nagy plakátok, csak egy egyszerű, de vonzó felirat: „A fény mindenhol ott van, ahol elhiszed.”
+
+A közönség kíváncsian, ám kissé szkeptikusan gyűlt össze a porond körül. Az előadás kezdete előtt még volt egy kis feszültség, hiszen sokan sosem hallottak erről a cirkuszról. Amint a függöny felemelkedett, azonban minden megváltozott. Az első jelenetben, mintha varázslatos fények kezdték volna el táncolni a levegőben, miközben az akrobaták egy-egy szaltóval, szinte hangtalanul repültek. Az egész műsor tele volt újdonsággal: a zene nem csak a levegőben, hanem a színekben is áramlott, a fények maguk meséltek történetet.
+
+A közönség lenyűgözve figyelte, ahogy a bohócok nem a szokásos komikus szerepükben tűntek fel, hanem egy-egy érzelmes, szürreális jelenetben, amely mélyebb hatást gyakorolt, mint bármi, amit eddig láttak. A cirkuszban nemcsak a trükkök, hanem a művészetek különböző formái keveredtek: a tánc, a fények, a mozgás és a hangok egy teljesen új élményt adtak a nézőknek.
+
+A záróakkordot egy hatalmas fényshow zárta, amely a sötét éjszakai égbolton is tükröződött. Az előadás végén a közönség felállva tapsolt, nemcsak a művészeknek, hanem a varázslatnak is, ami minden egyes pillanatra rátette a saját pecsétjét.
+
+Ez volt a Cirque du Lumière első fellépése, és az aznapi siker olyan hatással volt a városra, hogy a cirkusz már másnap reggel elkezdett új előadásokat szervezni, mindvégig titokzatos maradva, hogy mindig egy új élményt kínáljon. Az emberek hetekig beszéltek róla, és a "Fény Cirkusza" hamarosan híres lett – de mindig megőrizte varázsát, hiszen a legnagyobb titok a fények között rejtőzött.
+    </div>
+    <div id="right">
+    <h2>Jegyárak:</h2>
+    <h3>Kedvezményes: 1500ft</h3>
+    <h3>Felnőtt: 3000ft</h3>S
+
+    </div>
+</div>
+
+
+</body>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000);
+}
+
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+</script>
+
